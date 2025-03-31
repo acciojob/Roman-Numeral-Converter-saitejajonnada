@@ -9,13 +9,12 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 	let roman = "";
-	symbols.forEach((item)=>{
-		const[symbol,value] = item;
+	symbol.forEach(([letter,value])=>{
 		while(num >= value){
 			roman+=symbol;
 			num -= value;
 		}
-	})
+	});
     return roman;
 }
 console.log(convertToRoman(14));
