@@ -9,7 +9,8 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 	let roman = "";
-	symbol.forEach(([letter,value])=>{
+	for(let key in symbol)
+		let [letter,value])= symbol[key];
 		while(num >= value){
 			roman+=symbol;
 			num -= value;
